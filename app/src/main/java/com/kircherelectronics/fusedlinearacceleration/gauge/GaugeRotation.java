@@ -429,6 +429,9 @@ public final class GaugeRotation extends View {
             height = faceBitmap.getHeight();
         }
 
+	if (height < 0)
+            height = 0;
+	    
         faceBitmap.setPixels(allpixels, 0, faceBitmap.getWidth(), 0, 0,
                 faceBitmap.getWidth(), height);
 
